@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -7,51 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>todolist-jq</title>
     <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="./style/base.css">
-    <link rel="stylesheet" href="./">
 </head>
 
 <body>
     <div class="container">
         <h1>todolist-jq</h1>
-        <form action="" class="addTask">
+        <form action="" class="add-task">
             <input type="text" class="content">
-            <input type="submit" value="添加" class="button">
+            <input type="submit" value="添加" class="addTaskSubmit">
         </form>
-        <div class="taskList">
-            <div class="taskItem">
-                <span>
-                    <input type="checkbox" name="" id="">
-                </span>
-                <span class="itemContent">1111111111</span>
-                <span class="fr">
-                    <span class="action detail">详情</span>
-                    <span class="action delete">删除</span>
-                </span>
-            </div>
-            <div class="taskItem">
-                <span>
-                    <input type="checkbox" name="" id="">
-                </span>
-                <span class="itemContent">1111111111</span>
-                <span class="fr">
-                    <span class="action detail">详情</span>
-                    <span class="action delete">删除</span>
-                </span>
-            </div>
-            <div class="taskItem">
-                <span>
-                    <input type="checkbox" name="" id="">
-                </span>
-                <span class="itemContent">1111111111</span>
-                <span class="fr">
-                    <span class="action detail">详情</span>
-                    <span class="action delete">删除</span>
-                </span>
-            </div>
+        
+        <div class="task-list">
+            
+        </div>
+
+        <div class="task-detail">
+            <input type="text" class="detail-content">
+            <span>备注</span>
+            <textarea class="desc"></textarea>
+            <span>设置闹钟</span>
+            <input type="text" class="datetime">
+            <button class="detail-submit">提交</button>
         </div>
     </div>
-    <script src=""></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.datetimepicker.full.js"></script>
+    <script src="./js/store.js"></script>
+    <script src="./js/base.js"></script>
 </body>
 
 </html>
