@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yinyang-css</title>
+    <style>
+        body {
+            background: #444;
+        }
+
+        #yinyang {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 100px auto;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 1) 100%);
+            position: relative;
+            animation-duration: 4s;
+            animation-name: xxx;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        #yinyang::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            border: 60px solid black;
+            border-width: 60px;
+        }
+
+        #yinyang::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+            top: 75px;
+            right: 0;
+            border: 60px solid white;
+            ;
+            border-width: 60px;
+        }
+
+        @keyframes xxx {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="yinyang"></div>
+</body>
+
+</html>
